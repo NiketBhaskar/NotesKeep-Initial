@@ -99,7 +99,6 @@ class HomeFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-
     private fun getUserNote(uid:String) {
         var utility = Utility()
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
