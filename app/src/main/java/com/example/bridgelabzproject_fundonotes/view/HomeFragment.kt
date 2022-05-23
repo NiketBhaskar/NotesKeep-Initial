@@ -91,7 +91,6 @@ class HomeFragment : Fragment() {
         })
         return
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         var menuItem = item.itemId
         when(menuItem){
