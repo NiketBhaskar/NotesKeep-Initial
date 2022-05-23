@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <item
+        android:id="@+id/dashboardSearchBtn"
+        android:title="Search"
+        android:icon="@drawable/ic_search_taskbar"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/dashboardGridLinearToggleBtn"
+        android:title="LinearView"
+        android:icon="@drawable/ic_linearview_taskbar"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/dashboardProfileBtn"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_taskbar"
+        app:showAsAction="always"/>
+
+</menu>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:text="Profile Information"
+        android:background="@drawable/profile_information_bg"
+        android:padding="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/displayPictureIV"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
+
+    <TextView
+        android:id="@+id/profileFragmentNameTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Name"
+        android:background="@drawable/shape_button01"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profileFragmentEmailTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Email"
+        android:background="@drawable/shape_button01"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profileFragmentUidTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="UID"
+        android:gravity="center_horizontal"
+        android:background="@drawable/shape_button01"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/selectImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Update Profile Picture"
+        android:background="@drawable/shape_button01"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:textSize="15dp"
+        />
+
+</LinearLayout>
+

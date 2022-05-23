@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "429069074656",
+    "firebase_url": "https://bridgelabz-fundo-notes-default-rtdb.firebaseio.com",
+    "project_id": "bridgelabz-fundo-notes",
+    "storage_bucket": "bridgelabz-fundo-notes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:429069074656:android:fc2b85f84e7375f5791085",
+        "android_client_info": {
+          "package_name": "com.example.bridgelabzproject_fundonotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "429069074656-36vnn74c9kp31cjgb1t3tmk2ue728lee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1zvQlPDvFqSk2xDongGXEhPVg-tlFW9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "429069074656-36vnn74c9kp31cjgb1t3tmk2ue728lee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
