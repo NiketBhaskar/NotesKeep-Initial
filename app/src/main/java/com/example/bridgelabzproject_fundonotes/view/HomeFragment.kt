@@ -19,6 +19,7 @@ import com.example.bridgelabzproject_fundonotes.model.UserNote
 import com.example.bridgelabzproject_fundonotes.model.Utility
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -57,9 +58,46 @@ class HomeFragment : Fragment() {
         userNoteArrayList = arrayListOf<UserNote>()
         val db = SQLiteDatabaseHandler(this.requireContext())
         userNoteArrayListOffline = db.readData()
+
         getUserNote(uid)
+
         binding.addNoteBtn.setOnClickListener(){
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_fragmentAddNote)
+        }
+        var highPriorityArray = ArrayList<UserNote>()
+        var mediumPriorityArray = ArrayList<UserNote>()
+        var lowPriorityArray = ArrayList<UserNote>()
+
+        binding.labelRed.setOnClickListener(){
+            highPriorityArray.clear()
+            for(item in arrayNotes){
+                if(item.noteLabel!!.toLowerCase(Locale.getDefault()).contains("high")){
+                    highPriorityArray.add(item)
+                }
+            }
+            userRecyclerView.adapter = RecyclerViewAdaptor(highPriorityArray)
+        }
+        binding.labelGreen.setOnClickListener(){
+            mediumPriorityArray.clear()
+            for(item in arrayNotes){
+                if(item.noteLabel!!.toLowerCase(Locale.getDefault()).contains("medium")){
+                    mediumPriorityArray.add(item)
+                }
+            }
+            userRecyclerView.adapter = RecyclerViewAdaptor(mediumPriorityArray)
+        }
+        binding.labelYellow.setOnClickListener(){
+            lowPriorityArray.clear()
+            for(item in arrayNotes){
+                if(item.noteLabel!!.toLowerCase(Locale.getDefault()).contains("low")){
+                    lowPriorityArray.add(item)
+                }
+            }
+            userRecyclerView.adapter = RecyclerViewAdaptor(lowPriorityArray)
+        }
+
+        binding.labelAll.setOnClickListener() {
+            userRecyclerView.adapter = RecyclerViewAdaptor(userNoteArrayList)
         }
         return view
     }
@@ -94,7 +132,6 @@ class HomeFragment : Fragment() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         var menuItem = item.itemId
         when(menuItem){
-            R.id.dashboardSearchBtn -> Toast.makeText(activity, "You clicked on search button.", Toast.LENGTH_SHORT).show()
             R.id.dashboardGridLinearToggleBtn -> toggleLayoutManager()
         }
         return super.onOptionsItemSelected(item)
@@ -127,7 +164,6 @@ class HomeFragment : Fragment() {
         else{
         }
     }
-
     private fun toggleLayoutManager(){
         if(linearlayout){
             userRecyclerView.layoutManager = GridLayoutManager(activity,2)
@@ -138,20 +174,14 @@ class HomeFragment : Fragment() {
             linearlayout = true
         }
     }
+    /*fun highPriorityFilter(){
+        var highPriorityArray = ArrayList<UserNote>()
 
-    /*override fun passData(position: Int, userId: String, noteId: String) {
-        val bundle = Bundle()
-        bundle.putInt("input_pos", position)
-        bundle.putString("input_userId", userId)
-        bundle.putString("input_noteId", noteId)
-
-        val transaction = this.parentFragmentManager.beginTransaction()
-        val frag2 = EditNoteFragment()
-        frag2.arguments = bundle
-
-        transaction.replace(R.id.nav_host_fragment_content_main, frag2)
-        transaction.addToBackStack(null)
-        transaction.commit()
-
+        for(item in highPriorityArray){
+            if(item.noteLabel!!.toLowerCase(Locale.getDefault()).contains("high")){
+                highPriorityArray.add(item)
+            }
+        }
+        userRecyclerView.adapter = RecyclerViewAdaptor(highPriorityArray)
     }*/
 }

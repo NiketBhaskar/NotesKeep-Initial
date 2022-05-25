@@ -6,11 +6,50 @@
     android:layout_height="match_parent"
     android:background="@color/red"
     tools:context=".view.HomeFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="60dp">
 
+        <Button
+            android:id="@+id/labelRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:drawableEnd="@drawable/ic_label_red"
+            android:text="High"
+            />
+
+        <Button
+            android:id="@+id/labelGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:drawableEnd="@drawable/ic_label_green"
+            android:text="Medium" />
+
+        <Button
+            android:id="@+id/labelYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:drawableEnd="@drawable/ic_label_yellow"
+            android:text="Low" />
+        <Button
+            android:id="@+id/labelAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:drawableLeft="@drawable/ic_discard"
+
+            />
+
+    </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp">
+        android:layout_marginTop="110dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvAllNotes"
@@ -32,5 +71,6 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

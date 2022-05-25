@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item
-        android:title="Notes"
-        android:icon="@drawable/ic_notes_black" />
     <item
         android:title="Reminders"
         android:icon="@drawable/ic_notification_black"/>
     <item
-        android:title="Create New Label"
-        android:icon="@drawable/ic_label"/>
+        android:id="@+id/highPriority"
+        android:title="High Priority Notes"
+        android:icon="@drawable/ic_label_red"/>
     <item
-        android:title="Archive"
-        android:icon="@drawable/ic_archive"/>
+        android:title="Medium Priority Notes"
+        android:icon="@drawable/ic_label_green"/>
     <item
-        android:title="Trash"
-        android:icon="@drawable/ic_recycle_black"/>
-    <item
-        android:title="Setting"
-        android:icon="@drawable/ic_settings"/>
-    <item
-        android:title="Help &amp; Feedback"
-        android:icon="@drawable/ic_help"/>
+        android:title="Low Priority Notes"
+        android:icon="@drawable/ic_label_yellow"/>
     <item
         android:id="@+id/navLogout"
         android:title="Logout"

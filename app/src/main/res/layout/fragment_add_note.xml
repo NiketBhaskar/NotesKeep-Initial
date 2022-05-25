@@ -40,19 +40,21 @@
                 android:id="@+id/labelRed"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:background="@drawable/red_dot"/>
-            <ImageView
-                android:id="@+id/labelYellow"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginStart="20dp"
-                android:background="@drawable/yellow_dot"/>
+                android:background="@drawable/red_dot" />
             <ImageView
                 android:id="@+id/labelGreen"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="20dp"
-                android:background="@drawable/green_dot"/>
+                android:background="@drawable/green_dot"
+                />
+            <ImageView
+                android:id="@+id/labelYellow"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/yellow_dot"
+                />
 
         </LinearLayout>
         <EditText
