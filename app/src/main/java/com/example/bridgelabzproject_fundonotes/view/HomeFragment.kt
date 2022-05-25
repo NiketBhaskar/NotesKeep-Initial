@@ -63,7 +63,6 @@ class HomeFragment : Fragment() {
         binding.addNoteBtn.setOnClickListener(){
             Navigation.findNavController(it).navigate(R.id.action_homeFragment_to_fragmentAddNote)
         }
-
         var highPriorityArray = ArrayList<UserNote>()
         var mediumPriorityArray = ArrayList<UserNote>()
         var lowPriorityArray = ArrayList<UserNote>()
