@@ -100,7 +100,6 @@ class HomeFragment : Fragment() {
         }
         return view
     }
-
     override fun onCreateOptionsMenu(menu: Menu,inflater: MenuInflater){
         super.onCreateOptionsMenu(menu, inflater)
         val search = menu!!.findItem(R.id.dashboardSearchBtn)
