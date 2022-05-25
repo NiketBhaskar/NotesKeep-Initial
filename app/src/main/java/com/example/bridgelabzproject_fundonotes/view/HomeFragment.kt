@@ -58,7 +58,6 @@ class HomeFragment : Fragment() {
         userNoteArrayList = arrayListOf<UserNote>()
         val db = SQLiteDatabaseHandler(this.requireContext())
         userNoteArrayListOffline = db.readData()
-
         getUserNote(uid)
 
         binding.addNoteBtn.setOnClickListener(){
